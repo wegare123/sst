@@ -29,8 +29,8 @@ else
 echo -e "version anda tidak terdeteksi!"
 exit
 fi
-wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/shadowsocks-tunnel-badvpn-tun2socks/main/sst.sh" -O /usr/bin/sst
-wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/shadowsocks-tunnel-badvpn-tun2socks/main/autorekonek-sst.sh" -O /usr/bin/autorekonek-sst
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/sst/main/sst.sh" -O /usr/bin/sst
+wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/sst/main/autorekonek-sst.sh" -O /usr/bin/autorekonek-sst
 opkg install ip-full && opkg install *.ipk && opkg install lsof && opkg install fping
 chmod +x /usr/bin/sst
 chmod +x /usr/bin/autorekonek-sst
