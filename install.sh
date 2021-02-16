@@ -29,6 +29,12 @@ else
 echo -e "version anda tidak terdeteksi!"
 exit
 fi
+cek2=$(ls /usr/bin/ | grep ss-local)
+if [ $cek2 = "ss-local" ]; then
+echo > /dev/null
+else
+opkg install shadowsocks-libev-ss-local
+fi
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/sst/main/sst.sh" -O /usr/bin/sst
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/sst/main/autorekonek-sst.sh" -O /usr/bin/autorekonek-sst
 opkg install ip-full && opkg install *.ipk && opkg install lsof && opkg install fping
