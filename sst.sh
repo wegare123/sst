@@ -144,11 +144,11 @@ route add 8.8.8.8 gw "$route" metric 0
 route add 8.8.4.4 gw "$route" metric 0
 route add "$host" gw "$route" metric 0
 route add default gw 10.0.0.2 metric 0
-cat <<EOF> /usr/bin/ping-sst
+echo '
 #!/bin/bash
 #sst (Wegare)
-fping -l 10.0.0.2
-EOF
+host="$(cat /root/akun/sst.txt | grep -i host | cut -d= -f2 | head -n1)"
+fping -l $host' > /usr/bin/ping-sst
 chmod +x /usr/bin/ping-sst
 /usr/bin/ping-sst > /dev/null 2>&1 &
 elif [ "${tools}" = "3" ]; then
