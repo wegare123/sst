@@ -103,7 +103,8 @@ cat <<EOF> /root/akun/sst.json
   "password" : "$pass",
   "local_port" : 1080,
   "local_address" : "127.0.0.1",
-  "timeout" : 60
+  "timeout" : 60,
+  "mode":"tcp_and_udp"
 }
 EOF
 fi
