@@ -3,7 +3,7 @@
 stop () {
 host="$(cat /root/akun/sst.txt | grep -i host | cut -d= -f2 | head -n1)" 
 route="$(cat /root/akun/ipmodem.txt | grep -i ipmodem | cut -d= -f2 | tail -n1)" 
-killall -q badvpn-tun2socks ss-local ping-sst fping
+killall -q badvpn-tun2socks ss-local ping-sst fping tun2socks
 route del 8.8.8.8 gw "$route" metric 0 2>/dev/null
 route del 8.8.4.4 gw "$route" metric 0 2>/dev/null
 route del "$host" gw "$route" metric 0 2>/dev/null

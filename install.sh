@@ -40,11 +40,11 @@ wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/sst/mai
 wget --no-check-certificate "https://github.com/wegare123/sst/blob/main/simple-obfs_0.0.5-5_aarch64_cortex-a53.ipk?raw=true" -O ~/simple-obfs.ipk
 wget --no-check-certificate "https://github.com/wegare123/sst/blob/main/ck-client?raw=true" -O /usr/bin/ck-client
 wget --no-check-certificate "https://github.com/wegare123/backup/blob/main/tun2socks?raw=true" -O /usr/bin/tun2socks
+chmod +x /usr/bin/tun2socks
 opkg install ip-full && opkg install *.ipk && opkg install lsof && opkg install fping
 chmod +x /usr/bin/sst
 chmod +x /usr/bin/autorekonek-sst
 chmod +x /usr/bin/ck-client
-chmod +x /usr/bin/tun2socks
 rm -r ~/*.ipk
 rm -r ~/install.sh
 mkdir -p ~/akun/
